@@ -38,3 +38,29 @@ main p, main figure {
     padding-top: 142px;
     text-align: center;
 }
+
+.battle-scene {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.enemy, .player, .scene {
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.status {
+    padding-top: 57px;
+}
+
+.menu {
+    padding-top: 32px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
