@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navigation {
+    display: contents;
+    list-style-type: none;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.single-column-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main p, main figure {
+    height: 300px;
+    width: 300px;
+    padding-top: 142px;
+    text-align: center;
+}
