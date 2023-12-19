@@ -85,3 +85,7 @@ main {
 .menu ul {
     list-style-type: none;
 }
+
+#battle-menu ul li {
+    text-align: left;
+}
