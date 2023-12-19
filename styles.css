@@ -86,8 +86,18 @@ main {
     list-style-type: none;
 }
 
-#scene-description {
+.status {
     width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.next {
+    text-align: right;
+}
+
+.next button {
+    display: none;
 }
 
 #battle-menu ul li {
