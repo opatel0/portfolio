@@ -1,13 +1,14 @@
 const battleMenu = document.querySelectorAll("#battle-menu ul li")
 const enemy = document.querySelector(".enemy img")
-const player = document.querySelector(".player img")
-const nextBtn = document.getElementById("next-button")
-const scene = document.getElementById("scene-description")
 const enemyHP = document.getElementById("enemy-hp")
+const player = document.querySelector(".player img")
 const playerHP = document.getElementById("player-hp")
+const scene = document.getElementById("scene-description")
+const nextBtn = document.getElementById("next-button")
 
 let priest = {
     hitPoints: 10,
+    possessed: false,
     attack: {
         recite: 1,
         condemn: false,
@@ -16,7 +17,6 @@ let priest = {
 }
 let demon = {
     hitPoints: 10,
-    attackPoints: 1,
     condemned: false,
     attack: [
         {throwObject: [1, "<br>The demon throws an object!"]},
@@ -25,7 +25,7 @@ let demon = {
         {possess: [0, "<br>The Demon attempted to possess the Priest. He failed."]},
     ]
 }
-let playerTurn = true;
+let gameOver = false;
 
 for (i=0; i<battleMenu.length; i++) {
     battleMenu[i].addEventListener("mouseenter", (e) => {
@@ -45,6 +45,7 @@ for (i=0; i<battleMenu.length; i++) {
             scene.innerHTML = "The priest recovers strength."
         } else if (e.target.getAttribute("id") === "condemn") {
             demon.condemned = demon.hitPoints <= 0 ? true : false;
+            gameOver = demon.condemned ? true : false;
             enemy.style.transform = demon.condemned ? "rotate(90deg)" : "0";
             scene.innerHTML = demon.condemned ? "The demon has been comdemned to hell" : "The Demon remains strong against condemnation";
         } else {
@@ -55,17 +56,24 @@ for (i=0; i<battleMenu.length; i++) {
         
         // nextBtn.style.display = "inline-block"; // logic will be implemented later
         let demonAttack = Object.entries(demon.attack[Math.floor(Math.random() * 4)]);
-        if (demonAttack[0][0] === "drawPower") {
+        if (demonAttack[0][0] === "drawPower" && !gameOver) {
             demon.hitPoints += demonAttack[0][1][0];
             demon.hitPoints = demon.hitPoints > 10 ? 10 : demon.hitPoints;
             enemyHP.setAttribute("value", String(demon.hitPoints));
-        } else if (demonAttack[0][0] === "possess" && priest.hitPoints <= 3) {
+        } else if (demonAttack[0][0] === "possess" && priest.hitPoints <= 3 && !gameOver) {
             demonAttack[0][1][1] = "<br>The priest has been possessed.<br>All hope is lost.";
+            gameOver = true;
             player.style.transform = "rotate(270deg)";
-        } else if (demonAttack[0][0].includes("throw")) {
+        } else if (demonAttack[0][0].includes("throw") && !gameOver) {
             priest.hitPoints -= demonAttack[0][1][0];
             playerHP.setAttribute("value", String(priest.hitPoints));
         }
-        scene.innerHTML += demonAttack[0][1][1]
+        scene.innerHTML += !demon.condemned ? demonAttack[0][1][1] : "";
+
+        if (gameOver) {
+            for (i=0; i<battleMenu.length; i++) {
+                battleMenu[i].style.display = "none";
+            }
+        }
     })
 }
