@@ -118,6 +118,12 @@ main {
     padding-top: 79px;
 }
 
+#restart:hover {
+    color: red;
+    font-weight: bold;
+    list-style-type: disc;
+}
+
 a:link, a:visited {
     color: #5FBE92;
 }

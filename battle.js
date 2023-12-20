@@ -1,10 +1,12 @@
-const battleMenu = document.querySelectorAll("#battle-menu ul li")
+const menuOptions = document.querySelectorAll("#battle-menu ul li")
+const battleMenu = document.querySelector("#battle-menu ul")
 const enemy = document.querySelector(".enemy img")
 const enemyHP = document.getElementById("enemy-hp")
 const player = document.querySelector(".player img")
 const playerHP = document.getElementById("player-hp")
 const scene = document.getElementById("scene-description")
 const nextBtn = document.getElementById("next-button")
+const restartBtn = document.getElementById("restart")
 
 let priest = {
     hitPoints: 10,
@@ -27,18 +29,36 @@ let demon = {
 }
 let gameOver = false;
 
-for (i=0; i<battleMenu.length; i++) {
-    battleMenu[i].addEventListener("mouseenter", (e) => {
+restartBtn.addEventListener("click", (e) => {
+    if (e.target.getAttribute("id") === "restart") {
+        gameOver = false;
+        priest.hitPoints = 10;
+        playerHP.setAttribute("value", String(priest.hitPoints))
+        priest.possessed = false;
+        demon.hitPoints = 10;
+        enemyHP.setAttribute("value", String(demon.hitPoints))
+        demon.condemned = false;
+        enemy.style.transform = "none";
+        player.style.transform = "none";
+        restartBtn.style.display = "none";
+        for (i=0; i<(menuOptions.length-1); i++) {
+            menuOptions[i].style.display = "list-item";
+        }
+        scene.innerHTML = "The Priest arrives and prepares to exorcise the Demon. <br>Select the Priest's action in the battle menu."
+    }
+})
+for (i=0; i<(menuOptions.length-1); i++) {
+    menuOptions[i].addEventListener("mouseenter", (e) => {
         e.target.style.color = "red";
         e.target.style.fontWeight = "bold";
         e.target.style.listStyleType = "disc";
     })
-    battleMenu[i].addEventListener("mouseleave", (e) => {
+    menuOptions[i].addEventListener("mouseleave", (e) => {
         e.target.style.color = "var(--text-color)";
         e.target.style.fontWeight = "normal";
         e.target.style.listStyleType = "none";
     })
-    battleMenu[i].addEventListener("click", (e) => {
+    menuOptions[i].addEventListener("click", (e) => {
         if (e.target.getAttribute("id") === "heal") {
             priest.hitPoints = 10;
             playerHP.setAttribute("value", String(priest.hitPoints))
@@ -71,9 +91,10 @@ for (i=0; i<battleMenu.length; i++) {
         scene.innerHTML += !demon.condemned ? demonAttack[0][1][1] : "";
 
         if (gameOver) {
-            for (i=0; i<battleMenu.length; i++) {
-                battleMenu[i].style.display = "none";
+            for (i=0; i<(menuOptions.length-1); i++) {
+                menuOptions[i].style.display = "none";
             }
+            restartBtn.style.display = "list-item";
         }
     })
 }
