@@ -97,6 +97,12 @@ main {
     display: none;
 }
 
+.links {
+    display: flex;
+    justify-content: right;
+    margin-right: 25px;
+}
+
 #battle-menu ul li {
     text-align: left;
     width: 250px;
