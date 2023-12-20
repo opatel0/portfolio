@@ -13,14 +13,10 @@
 
 body {
     background-color: black;
-    color: #00ff30;
+    color: var(--text-color);
 }
 
-a:link {
-    color: #5FBE92;
-}
-
-a:visited {
+a:link, a:visited {
     color: #5FBE92;
 }
 
