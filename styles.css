@@ -103,6 +103,10 @@ main {
     margin-right: 25px;
 }
 
+.preview {
+    width: 400px;
+}
+
 #battle-menu ul li {
     text-align: left;
     width: 250px;
@@ -133,6 +137,8 @@ main {
 #carousel {
     display: flex;
     flex-direction: row;
+    height: 600px;
+    align-items: center;
 }
 
 a:link, a:visited {
@@ -146,7 +152,7 @@ a:hover {
 /* between desktop and phone */
 @media (min-width: 768px) {
     * {
-        color: blue;
+        color: var(--text-color);
     }
 }
 
