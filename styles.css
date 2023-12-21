@@ -130,6 +130,11 @@ main {
     list-style-type: disc;
 }
 
+#carousel {
+    display: flex;
+    flex-direction: row;
+}
+
 a:link, a:visited {
     color: #5FBE92;
 }
