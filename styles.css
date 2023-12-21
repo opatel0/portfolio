@@ -18,33 +18,55 @@ body {
 
 header {
     text-align: center;
-    margin-top: 15px;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 15px;
+    justify-content: center;
 }
 
 main {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 50px;
-}
-
-.projects {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 15px;
+    justify-content: center;
 }
 
 .navigation {
     display: contents;
     list-style-type: none;
+}
+
+a:link, a:visited {
+    color: #5FBE92;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Welcome */
+#landing-text {
+    height: 400px;
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* About */
+#bio-text {
+    height: 400px;
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Projects */
+.battle-scene {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 
 .single-column-content {
@@ -53,11 +75,8 @@ main {
     text-align: center;
 }
 
-.battle-scene {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+.menu ul {
+    list-style-type: none;
 }
 
 .enemy, .player, .scene {
@@ -71,67 +90,20 @@ main {
     background-color: white;
 }
 
-.status {
-    padding-top: 57px;
-}
-
-.menu {
-    padding-top: 32px;
-}
-
-.menu ul {
-    list-style-type: none;
-}
-
-.status {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
-.next {
-    text-align: right;
-}
-
-.next button {
-    display: none;
-}
-
-.links {
-    display: flex;
-    justify-content: right;
-    margin-right: 25px;
-}
-
-.preview {
-    width: 400px;
-}
-
 #battle-menu ul li {
     text-align: left;
     width: 250px;
-}
-
-#landing-text {
-    height: 400px;
-    width: 400px;
-    text-align: left;
-    font-size: 20px;
-    padding-top: 152px;
-}
-
-#bio-text {
-    height: 400px;
-    width: 400px;
-    text-align: left;
-    font-size: 20px;
-    padding-top: 79px;
 }
 
 #restart:hover {
     color: red;
     font-weight: bold;
     list-style-type: disc;
+}
+
+/* Writing */
+.preview {
+    width: 400px;
 }
 
 #carousel {
@@ -141,18 +113,16 @@ main {
     align-items: center;
 }
 
-a:link, a:visited {
-    color: #5FBE92;
-}
-
-a:hover {
-    color: white;
-}
-
 /* between desktop and phone */
 @media (min-width: 768px) {
     * {
         color: var(--text-color);
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 15px;
     }
 }
 
@@ -160,5 +130,44 @@ a:hover {
 @media (min-width: 1024px) {
     * {
         color: var(--text-color);
+    }
+    /*------------------------------- PROJECTS */
+    .battle-scene {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .single-column-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+    }
+    
+    .enemy, .player, .scene {
+        display: flex;
+        height: 150px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .enemy img {
+        background-color: white;
+    }
+    
+    #battle-menu ul li {
+        text-align: left;
+        width: 250px;
+    }
+    
+    #restart:hover {
+        color: red;
+        font-weight: bold;
+        list-style-type: disc;
     }
 }

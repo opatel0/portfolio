@@ -8,64 +8,60 @@
     <script src="battle.js" defer></script>
 </head>
 <body>
-    <a href="./index.html" id="index">.welcome</a>
-    <header><h1>Projects</h1></header>
-    <nav>
-        <ul class="navigation">
+    <header>
+        <h1><a href="./index.html" id="index">.welcome</a>/Projects</h1>
+        <nav>
+            <ul class="navigation">
             <li><a href="./about.html">About Me</a></li>
             <li><a href="./projects.html">Projects</a></li>
             <li><a href="./writing.html">Writing</a></li>
             <li><a href="./documents/resume.html" target="_blank">Resume</a></li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </header>
     <main class="single-column-content">
-        <details><summary>RPG Battle</summary>
         <div class="battle-scene">
-        <h2>Turn-Based RPG Battle Scene</h2>
-        <div class="enemy">
-            <div class="status">
-                <div class="name">
-                    Demon
+            <h2>Turn-Based RPG Battle Scene</h2>
+            <div class="enemy">
+                <div class="status">
+                    <div class="name">
+                        Demon
+                    </div>
+                    <div>
+                        <label for="enemy-hp">Hit Points: </label>
+                        <meter id="enemy-hp" value="10" min="0" max="10">10 out of 10</meter>
+                    </div>
                 </div>
-                <div>
-                    <label for="enemy-hp">Hit Points: </label>
-                    <meter id="enemy-hp" value="10" min="0" max="10">10 out of 10</meter>
+                <img src="./images/demon.png" width="150"> <!--https://svgsilh.com/image/1296034.html-->
+            </div>
+            <div class="player">
+                <img src="./images/priest.jpg" width="150"> <!--https://www.istockphoto.com/vector/pope-gm165031249-515596-->
+                <div class="status">
+                    <div class="name">
+                        Priest
+                    </div>
+                    <div>
+                        <label for="player-hp">Hit Points: </label>
+                        <meter id="player-hp" value="10" min="0" max="10">10 out of 10</meter>
+                    </div>
                 </div>
             </div>
-            <img src="./images/demon.png" width="150"> <!--https://svgsilh.com/image/1296034.html-->
-        </div>
-        <div class="player">
-            <img src="./images/priest.jpg" width="150"> <!--https://www.istockphoto.com/vector/pope-gm165031249-515596-->
-            <div class="status">
-                <div class="name">
-                    Priest
+            <div class="scene">
+                <div class="status">
+                    <p id="scene-description">The Priest arrives and prepares to exorcise the Demon. <br>
+                    Select the Priest's action in the battle menu.</p>
                 </div>
-                <div>
-                    <label for="player-hp">Hit Points: </label>
-                    <meter id="player-hp" value="10" min="0" max="10">10 out of 10</meter>
-                </div>
-            </div>
-        </div>
-        <div class="scene">
-            <div class="status">
-                <p id="scene-description">The Priest arrives and prepares to exorcise the Demon. <br>
-                Select the Priest's action in the battle menu.<br></p>
-                <div class="next">
-                <button id="next-button">Next</button>
-                </div>
-            </div>
-            <div id="battle-menu" class="menu">
-                <ul>
+                <div id="battle-menu" class="menu">
+                    <ul>
                     <li id="recite">Read Scripture</li>
                     <li id="condemn">Condemn Demon to Hell</li>
                     <li id="douse">Douse Demon with Holy Water</li>
                     <li id="heal">Pray and Heal Wounds</li>
                     <li id="restart" style="display: none">Restart</li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
-        </div>
-        </details>
     </main>
 </body>
 </html>
