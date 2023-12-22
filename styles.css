@@ -14,22 +14,55 @@
 body {
     background-color: black;
     color: var(--text-color);
+    margin: 16px;
 }
 
 header {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 140px;
+    text-align: left;
+}
+
+h1 {
+    margin: 16px;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-around;
+    align-items: space-around;
+    margin: 16px;
 }
 
 main {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 0px 16px 16px 16px;
+}
+
+header nav ul li {
+    margin-right: 12px;
+}
+
+.landing-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-heading-lines {
+    display: flex;
+    flex-direction: row;
+}
+
+#landing-text + img {
+    width: 200px;
+    height: 200px;
 }
 
 .navigation {
@@ -47,10 +80,9 @@ a:hover {
 
 /* Welcome */
 #landing-text {
-    height: 400px;
-    width: 400px;
+    align-self: center;
     text-align: left;
-    font-size: 20px;
+    font-size: 28px;
 }
 
 /* About */
@@ -118,11 +150,33 @@ a:hover {
     * {
         color: var(--text-color);
     }
+    header {
+        flex-direction: column;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     nav {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-top: 15px;
+        width: 700px;
+        margin: 16px 16px 0px 16px;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 800px;
+        margin: 16px 16px 0px 16px;
+    }
+    .landing-heading {
+        flex-direction: row;
+    }
+    .mobile {
+        display: none;
     }
 }
 
@@ -131,10 +185,23 @@ a:hover {
     * {
         color: var(--text-color);
     }
+    /*-------------------------------- WELCOME */
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #landing-text + img {
+        width: 400px;
+        height: 400px;
+    }
+    #landing-text {
+        font-size: 28px;
+    }
     /*------------------------------- PROJECTS */
     .battle-scene {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
         justify-content: center;
     }
