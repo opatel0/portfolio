@@ -1,240 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Pixelify Sans";
 }
-
 :root {
+    --bg-color: black;
     --text-color: #00ff30;
+    --alt-text: #5FBE92;
+    --alt-text-2: white;
 }
-
 body {
-    background-color: black;
+    background-color: var(--bg-color);
     color: var(--text-color);
     margin: 16px;
 }
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 140px;
-    text-align: left;
-}
-
-h1 {
-    margin: 16px;
-}
-
 nav {
     display: flex;
-    flex-direction: column;
-    height: 120px;
-    justify-content: space-around;
-    align-items: space-around;
-    margin: 16px;
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px 16px 16px 16px;
-}
-
-header nav ul li {
-    margin-right: 12px;
-}
-
-.landing-heading {
-    display: flex;
-    flex-direction: column;
-}
-
-.landing-heading-lines {
-    display: flex;
     flex-direction: row;
 }
-
-#landing-text + img {
-    width: 200px;
-    height: 200px;
-}
-
 .navigation {
     display: contents;
     list-style-type: none;
 }
-
 a:link, a:visited {
-    color: #5FBE92;
+    color: var(--alt-text);
 }
-
 a:hover {
-    color: white;
+    color: var(--alt-text-2);
 }
-
-/* Welcome */
-#landing-text {
-    align-self: center;
-    text-align: left;
-    font-size: 28px;
-}
-
-/* About */
-#bio-text {
-    height: 400px;
-    width: 400px;
-    text-align: left;
-    font-size: 20px;
-}
-
-/* Projects */
-.battle-scene {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-.single-column-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.menu ul {
-    list-style-type: none;
-}
-
-.enemy, .player, .scene {
-    display: flex;
-    height: 150px;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.enemy img {
-    background-color: white;
-}
-
-#battle-menu ul li {
-    text-align: left;
-    width: 250px;
-}
-
-#restart:hover {
-    color: red;
-    font-weight: bold;
-    list-style-type: disc;
-}
-
-/* Writing */
-.preview {
-    width: 400px;
-}
-
-#carousel {
-    display: flex;
-    flex-direction: row;
-    height: 600px;
-    align-items: center;
-}
-
-/* between desktop and phone */
+    /* between desktop and phone */
 @media (min-width: 768px) {
     * {
         color: var(--text-color);
     }
-    header {
-        flex-direction: column;
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 700px;
-        margin: 16px 16px 0px 16px;
-    }
-    main {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 800px;
-        margin: 16px 16px 0px 16px;
-    }
-    .landing-heading {
-        flex-direction: row;
-    }
-    .mobile {
-        display: none;
-    }
 }
-
     /* Desktop */
 @media (min-width: 1024px) {
     * {
         color: var(--text-color);
     }
-    /*-------------------------------- WELCOME */
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    #landing-text + img {
-        width: 400px;
-        height: 400px;
-    }
-    #landing-text {
-        font-size: 28px;
-    }
-    /*------------------------------- PROJECTS */
-    .battle-scene {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .single-column-content {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .menu ul {
-        list-style-type: none;
-    }
-    
-    .enemy, .player, .scene {
-        display: flex;
-        height: 150px;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    
-    .enemy img {
-        background-color: white;
-    }
-    
-    #battle-menu ul li {
-        text-align: left;
-        width: 250px;
-    }
-    
-    #restart:hover {
-        color: red;
-        font-weight: bold;
-        list-style-type: disc;
+    header {
+        height: auto;
     }
 }

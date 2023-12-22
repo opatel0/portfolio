@@ -1,0 +1,10 @@
+.preview {
+    width: 400px;
+}
+
+#carousel {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    align-items: center;
+}

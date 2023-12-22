@@ -1,0 +1,38 @@
+.battle-scene {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.single-column-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.enemy, .player, .scene {
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.enemy img {
+    background-color: white;
+}
+
+#battle-menu ul li {
+    text-align: left;
+    width: 250px;
+}
+
+#restart:hover {
+    color: red;
+    font-weight: bold;
+    list-style-type: disc;
+}
