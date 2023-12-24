@@ -27,7 +27,7 @@ nav {
 a:link, a:visited {
     color: var(--alt-text);
 }
-a:hover {
+.navigation li a:hover {
     color: var(--alt-text-2);
 }
     /* between desktop and phone */

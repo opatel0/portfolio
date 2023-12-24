@@ -1,52 +1,82 @@
 body { 
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 90vw;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
 }
-    header {
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
+    width: 90%;
+    text-align: center;
+}
+.landing-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 26px;
+    height: 25vh;
+    justify-content: center;
+}
+.landing-heading-lines {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 50vh;
     text-align: left;
 }
 nav {
     display: flex;
     flex-direction: column;
-    height: 15vh;
-    font-size: 20px;
-    justify-content: space-between;
+    text-transform: uppercase;
+    height: 50vh;
+    width: 90%;
+    font-size: 40px;
+}
+.navigation {
+    text-align: center;
+    justify-content: center;
+}
+.navigation li {
+    border: 3px solid var(--text-color);
+    height: 25%;
+    width: 100%;
+    margin: 1px;
+}
+a:link {
+    color: var(--text-color);
+}
+.navigation li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 50px;
 }
 img {
     width: 200px;
     height: 200px;
+    display: none;
 }
 p {
     text-align: left;
-    font-size: 28px;
-}
-.landing-heading {
-    display: flex;
-    flex-direction: column;
-}
-.landing-heading-lines {
-    display: flex;
-    flex-direction: row;
+    font-size: 50px;
 }
 main {
     display: flex;
     flex-direction: row;
-    height: 50vh;
+    height: 25%;
     justify-content: space-around;
     align-items: center;
-}
+} 
 
 @media (min-width: 768px) {
     body {
         align-items: center;
+        justify-content: center;
+        width: 100vw;
     }
     header {
         flex-direction: column;
@@ -54,16 +84,31 @@ main {
     }
     .landing-heading {
         flex-direction: row;
+        height: auto;
     }
     .mobile {
         display: none;
     }
     nav {
         flex-direction: row;
-        width: 45vw;
+        width: 45%;
         height: auto;
-        align-items: space-between;
+        justify-content: space-between;
         margin: 16px;
+        font-size: 20px;
+    }
+    .navigation li {
+        border: 0px solid var(--text-color);
+        height: auto;
+        margin: 0px;
+    }
+    .navigation li a {
+        color: var(--alt-text);
+        text-decoration: underline;
+        font-size: 20px;
+    }
+    a:hover {
+        color: var(--alt-text-2);
     }
     main {
         display: flex;
@@ -71,5 +116,11 @@ main {
         height: 250px;
         width: 50vw;
         align-items: center;
+    }
+    img {
+        display: inline-block;
+    }
+    p {
+        font-size: 36px;
     }
 }
