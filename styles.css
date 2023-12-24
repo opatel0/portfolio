@@ -41,7 +41,4 @@ a:link, a:visited {
     * {
         color: var(--text-color);
     }
-    header {
-        height: auto;
-    }
 }

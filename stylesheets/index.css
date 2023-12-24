@@ -5,7 +5,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-self: center;
     justify-self: center;
 }
 header {
@@ -13,7 +12,7 @@ header {
     flex-direction: column;
     align-items: center;
     height: 75%;
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 .landing-heading {
@@ -26,8 +25,6 @@ header {
 }
 .landing-heading-lines {
     display: flex;
-    flex-direction: row;
-    text-align: left;
 }
 nav {
     display: flex;
@@ -67,15 +64,13 @@ p {
 main {
     display: flex;
     flex-direction: row;
-    height: 25%;
+    height: 25vh;
     justify-content: space-around;
     align-items: center;
 } 
 
 @media (min-width: 768px) {
     body {
-        align-items: center;
-        justify-content: center;
         width: 100vw;
     }
     header {
