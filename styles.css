@@ -11,9 +11,6 @@
     --alt-text: #5FBE92;
     --alt-text-2: white;
 }
-html {
-    border: 1px solid yellow;
-}
 body {
     background-color: var(--bg-color);
     color: var(--text-color); 
@@ -23,7 +20,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 nav {
     display: flex;
