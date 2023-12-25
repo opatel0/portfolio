@@ -1,6 +1,49 @@
-#bio-text {
-    height: 400px;
-    width: 400px;
+header {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: flex-start;
+}
+h1 {
+    text-align: left;
+}
+nav {
+    display: none;
+}
+main {
+    height: auto;
+    width: 90%;
+}
+p {
+    height: 100%;
+    width: 100%;
     text-align: left;
     font-size: 20px;
+    margin-top: 16px;
+}
+figure > img {
+    height: 90vw;
+    width: 90vw;
+    margin-left: -16px;
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    main {
+        flex-direction: row-reverse;
+    }
+    nav {
+        display: flex;
+        width: 45vw;
+        margin-top: 16px;
+    }
+    figure > img {
+        height: 400px;
+        width: 400px;
+    }
+    p {
+        font-size: 26px;
+    }
 }
