@@ -15,7 +15,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color); 
     display: flex;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     flex-direction: column;
     justify-content: center;

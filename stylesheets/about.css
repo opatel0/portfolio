@@ -1,11 +1,11 @@
 header {
     display: flex;
-    height: auto;
     width: auto;
     justify-content: space-between;
 }
 h1 {
     text-align: left;
+    margin-top: 16px;
 }
 nav {
     display: none;
@@ -23,7 +23,7 @@ p {
 }
 figure > img {
     height: auto;
-    width: 100%;
+    width: 50%;
     margin-left: -16px;
 }
 
