@@ -22,8 +22,8 @@ p {
     margin-top: 16px;
 }
 figure > img {
-    height: 90vw;
-    width: 90vw;
+    height: auto;
+    width: 100%;
     margin-left: -16px;
 }
 
