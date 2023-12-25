@@ -1,38 +1,51 @@
+body {
+    justify-content: space-around;
+}
+header, h1 {
+    height: auto;
+}
 nav {
     display: none;
 }
 main {
     display: flex;
+    height: 80vh;
+    margin: 16px;
     flex-direction: column;
     text-align: center;
+    justify-content: space-between;
 }
 .battle-scene {
-    display: flex;
-    flex-direction: column;
+    display: contents;
     text-align: center;
-    justify-content: center;
 }
-
+.fighters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .menu ul {
     list-style-type: none;
 }
-
-.enemy, .player, .scene {
+.enemy, .player {
     display: flex;
     height: 150px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
 }
-
 .enemy img {
     background-color: white;
 }
-
+.scene .status {
+    margin-bottom: 16px;
+    width: 90vw;
+}
 #battle-menu ul li {
     text-align: left;
-    width: 250px;
+    width: 100%;
+    border: 3px solid var(--text-color);
+    margin: 1px;
 }
-
 #restart:hover {
     color: red;
     font-weight: bold;
@@ -40,23 +53,40 @@ main {
 }
 
 @media (min-width: 768px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
     h2 {
         margin: 16px;
     }
     nav {
         display: flex;
     }
-    .scene .status {
+    main {
+        height: 60vh;
+        width: 70vw;
+    }
+    .scene {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
         margin-right: 16px;
-        width: 40vw;
+        width: 70vw;
+    }
+    .scene .status {
+        margin-bottom: 0px;
+        width: 40vw;;
     }
     #battle-menu {
         margin: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    #battle-menu ul li {
+        width: 250px;
+        border: 0;
     }
 }
