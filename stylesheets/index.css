@@ -5,11 +5,14 @@ header {
     height: 75%;
     width: 100%;
     text-align: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
 }
 .landing-heading {
     display: flex;
     flex-direction: column;
-    text-align: left;
     font-size: 26px;
     height: 25vh;
     justify-content: center;
@@ -23,9 +26,6 @@ nav {
     text-transform: uppercase;
     height: 50vh;
     width: 90%;
-}
-.navigation {
-    text-align: center;
     justify-content: center;
 }
 .navigation li {
@@ -76,11 +76,13 @@ main {
         width: 45%;
         height: auto;
         margin: 16px;
+        justify-content: space-between;
+    }
+    .navigation {
+        width: 100%;
     }
     .navigation li {
         border: 0px solid var(--text-color);
-        height: auto;
-        margin: 0px;
     }
     .navigation li a {
         color: var(--alt-text);

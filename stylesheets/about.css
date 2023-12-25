@@ -2,7 +2,7 @@ header {
     display: flex;
     height: auto;
     width: auto;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 h1 {
     text-align: left;
@@ -36,8 +36,6 @@ figure > img {
     }
     nav {
         display: flex;
-        width: 45vw;
-        margin-top: 16px;
     }
     figure > img {
         height: 400px;

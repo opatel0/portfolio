@@ -1,14 +1,16 @@
+nav {
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 .battle-scene {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-}
-
-.single-column-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
 .menu ul {
@@ -35,4 +37,26 @@
     color: red;
     font-weight: bold;
     list-style-type: disc;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        margin: 16px;
+    }
+    nav {
+        display: flex;
+    }
+    .scene .status {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 16px;
+        width: 40vw;
+    }
+    #battle-menu {
+        margin: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
