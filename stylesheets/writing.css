@@ -1,10 +1,45 @@
-.preview {
-    width: 400px;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+    width: 100vw;
 }
-
+header {
+    height: auto;
+    margin-bottom: 16px;
+}
+main {
+    height: 80vh;
+}
+nav {
+    display: none;
+}
+.preview {
+    width: 100%;
+}
 #carousel {
     display: flex;
     flex-direction: row;
-    height: 600px;
+    height: auto;
+    width: 100%;
     align-items: center;
+}
+#leftBtn {
+    margin-right: 16px;
+}
+#rightBtn {
+    margin-left: 16px;
+}
+@media (min-width: 768px) {
+    body {
+        justify-content: center;
+    }
+    nav {
+        display: flex;
+    }
+    .preview {
+        width: 400px;
+        height: auto;
+    }
 }

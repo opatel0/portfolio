@@ -58,7 +58,7 @@ I see you everywhere. I pour coffee and it’s your blood in my cup; it’s your
 let currentIdx = 5;
 previewTitle.innerHTML = titles[currentIdx];
 previewText.innerHTML = previews[currentIdx];
-previewLink.innerHTML = titles[currentIdx];
+previewLink.innerHTML = titles[currentIdx] + " Full Text";
 previewLink.setAttribute("src", links[currentIdx])
 previewLink.setAttribute("href", links[currentIdx]);
 previewLink.setAttribute("target", "_blank");
@@ -67,7 +67,7 @@ leftBtn.addEventListener("click", (e) => {
     currentIdx += currentIdx !== 0 ? -1 : 5;
     previewTitle.innerHTML = titles[currentIdx];
     previewText.innerHTML = previews[currentIdx];
-    previewLink.innerHTML = titles[currentIdx];
+    previewLink.innerHTML = titles[currentIdx] + " Full Text";
     previewLink.setAttribute("href", links[currentIdx]);
     previewLink.setAttribute("target", "_blank");
 })
@@ -75,7 +75,7 @@ rightBtn.addEventListener("click", (e) => {
     currentIdx += currentIdx !== 5 ? 1 : -5;
     previewTitle.innerHTML = titles[currentIdx];
     previewText.innerHTML = previews[currentIdx];
-    previewLink.innerHTML = titles[currentIdx];
+    previewLink.innerHTML = titles[currentIdx] + " Full Text";
     previewLink.setAttribute("href", links[currentIdx]);
     previewLink.setAttribute("target", "_blank")
 })
