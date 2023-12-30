@@ -1,16 +1,14 @@
-header {
-    display: flex;
-    width: auto;
-    justify-content: space-between;
+body {
+    justify-content: start;
 }
-h1 {
-    text-align: left;
+header {
     margin-top: 16px;
 }
 nav {
     display: none;
 }
 main {
+    flex-direction: column;
     height: auto;
     width: 90%;
 }
@@ -18,18 +16,20 @@ p {
     height: auto;
     width: auto;
     text-align: left;
-    font-size: 20px;
-    margin-top: 16px;
+    font-size: calc(1rem + 1.5vw);
 }
 figure > img {
     height: 200px;
     width: 200px;
-    margin-left: -16px;
+    margin: -16px;
 }
 
 @media (min-width: 768px) {
+    body {
+        justify-content: center;
+    }
     header {
-        flex-direction: column;
+        margin-top: 0;
     }
     main {
         flex-direction: row-reverse;
@@ -42,6 +42,6 @@ figure > img {
         width: 400px;
     }
     p {
-        font-size: 26px;
+        font-size: calc(1rem + 1.25vw);
     }
 }

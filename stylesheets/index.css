@@ -1,20 +1,18 @@
+html * {
+    font-size: calc(1rem + 4vw);
+}
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 75%;
     width: 100%;
     text-align: center;
-    align-self: center;
-    justify-self: center;
-    justify-content: center;
     align-items: center;
 }
 .landing-heading {
     display: flex;
     flex-direction: column;
-    font-size: 26px;
-    height: 25vh;
+    height: 33.33%;
     justify-content: center;
 }
 .landing-heading-lines {
@@ -24,15 +22,18 @@ nav {
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    height: 50vh;
-    width: 90%;
-    justify-content: center;
+    align-items: center;
+    height: 66.66%;
+    width: calc(100% - 32px);
 }
 .navigation li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 3px solid var(--text-color);
     height: 25%;
     width: 100%;
-    margin: 1px;
+    margin: 2px;
 }
 a:link {
     color: var(--text-color);
@@ -40,7 +41,6 @@ a:link {
 .navigation li a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 50px;
 }
 img {
     width: 200px;
@@ -49,17 +49,18 @@ img {
 }
 p {
     text-align: left;
-    font-size: 50px;
 }
 main {
     display: flex;
     flex-direction: row;
-    height: 25vh;
-    justify-content: space-around;
+    height: 25%;
     align-items: center;
 } 
 
 @media (min-width: 768px) {
+    html * {
+        font-size: calc(1rem + 2vw);
+    }
     header {
         flex-direction: column;
         height: auto;
@@ -73,36 +74,31 @@ main {
     }
     nav {
         flex-direction: row;
-        width: 45%;
+        width: 60%;
         height: auto;
-        margin: 16px;
+        margin: 16px 0;
         justify-content: space-between;
     }
-    .navigation {
-        width: 100%;
-    }
     .navigation li {
-        border: 0px solid var(--text-color);
+        border: 0;
+        width: auto;
     }
     .navigation li a {
         color: var(--alt-text);
         text-decoration: underline;
-        font-size: 20px;
+        font-size: calc(.25rem + 2vw);
     }
-    a:hover {
+    .navigation li a:hover {
         color: var(--alt-text-2);
     }
     main {
         display: flex;
         flex-direction: row;
-        height: 250px;
-        width: 50vw;
-        align-items: center;
+        height: auto;
+        width: 50%;
+        justify-content: space-around;
     }
     img {
         display: inline-block;
-    }
-    p {
-        font-size: 36px;
     }
 }
