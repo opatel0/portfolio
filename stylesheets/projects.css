@@ -15,6 +15,9 @@ main {
     text-align: center;
     justify-content: space-between;
 }
+.battle-scene * {
+    font-size: calc(.5rem + 2vw);
+}
 .battle-scene {
     display: contents;
     text-align: center;
@@ -66,6 +69,9 @@ main {
     main {
         height: 60vh;
         width: 70vw;
+    }
+    .battle-scene * {
+        font-size: calc(.5rem + 1.5vw)
     }
     .scene {
         display: flex;

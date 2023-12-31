@@ -1,5 +1,6 @@
 const leftBtn = document.getElementById("leftBtn")
 const rightBtn = document.getElementById("rightBtn")
+const nextBtn = document.getElementById("nextBtn")
 const preview = document.getElementById("preview")
 const previewText = document.getElementById("preview-text")
 const previewTitle = document.getElementById("preview-title")
@@ -9,7 +10,7 @@ let writingList = ["courtship", "howToBreakUp", "howToMakeSamosas", "meetMyFrien
 let titles = ["Courtship", "How to Break Up with a Bird", "How to Make Samosas", "Meet My Friend", "Sextuality"]
 let links = []
 for (i=0; i<writingList.length; i++) {
-    links.push(`./documents/${writingList[i]}.html`)
+    links.push(`./../docs/${writingList[i]}.html`)
 }
 titles.push("Your New Face")
 links.push("https://rkvryquarterly.com/your-new-face/")
@@ -77,5 +78,13 @@ rightBtn.addEventListener("click", (e) => {
     previewText.innerHTML = previews[currentIdx];
     previewLink.innerHTML = titles[currentIdx] + " Full Text";
     previewLink.setAttribute("href", links[currentIdx]);
-    previewLink.setAttribute("target", "_blank")
+    previewLink.setAttribute("target", "_blank");
+})
+nextBtn.addEventListener("click", (e) => {
+    currentIdx += currentIdx !== 5 ? 1 : -5;
+    previewTitle.innerHTML = titles[currentIdx];
+    previewText.innerHTML = previews[currentIdx];
+    previewLink.innerHTML = titles[currentIdx] + " Full Text";
+    previewLink.setAttribute("href", links[currentIdx]);
+    previewLink.setAttribute("target", "_blank");
 })
