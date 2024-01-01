@@ -51,12 +51,10 @@ for (i=0; i<(menuOptions.length-1); i++) {
     menuOptions[i].addEventListener("mouseenter", (e) => {
         e.target.style.color = "red";
         e.target.style.fontWeight = "bold";
-        e.target.style.listStyleType = "disc";
     })
     menuOptions[i].addEventListener("mouseleave", (e) => {
         e.target.style.color = "var(--text-color)";
         e.target.style.fontWeight = "normal";
-        e.target.style.listStyleType = "none";
     })
     menuOptions[i].addEventListener("click", (e) => {
         if (e.target.getAttribute("id") === "heal") {

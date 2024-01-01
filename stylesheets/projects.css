@@ -1,22 +1,26 @@
 body {
-    justify-content: space-around;
+    justify-content: space-between;
 }
-header, h1 {
-    height: auto;
+header {
+    margin-top: 16px;
+    height: 10%;
 }
 nav {
     display: none;
 }
 main {
     display: flex;
-    height: 80vh;
-    margin: 16px;
+    height: 90%;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
+    margin-bottom: 16px;
+}
+main h2 {
+    font-size: clamp(1rem, 1rem + 2vw, 3rem);
 }
 .battle-scene * {
-    font-size: calc(.5rem + 2vw);
+    font-size: clamp(.5rem, .5rem + 2vw, 3rem);
 }
 .battle-scene {
     display: contents;
@@ -49,16 +53,15 @@ main {
     border: 3px solid var(--text-color);
     margin: 1px;
 }
-#restart:hover {
-    color: red;
-    font-weight: bold;
-    list-style-type: disc;
-}
+
 
 @media (min-width: 768px) {
     body {
         justify-content: center;
         align-items: center;
+    }
+    header {
+        height: auto;
     }
     h2 {
         margin: 16px;
@@ -67,11 +70,25 @@ main {
         display: flex;
     }
     main {
-        height: 60vh;
-        width: 70vw;
+        height: 70%;
+        width: 90%;
+        align-items: center;
     }
     .battle-scene * {
-        font-size: calc(.5rem + 1.5vw)
+        font-size: clamp(.25rem, .25rem + 1.5vw, 2rem);
+    }
+    .fighters {
+        justify-content: space-between;
+        width: 50%;
+    }
+    .player {
+        margin-right: 16px;
+    }
+    .name {
+        text-align: left;
+    }
+    .enemy {
+        margin-left: 16px;
     }
     .scene {
         display: flex;
@@ -79,20 +96,26 @@ main {
         justify-content: center;
         align-items: center;
         margin-right: 16px;
-        width: 70vw;
+        width: 80%;
     }
     .scene .status {
         margin-bottom: 0px;
-        width: 40vw;;
+        width: 60%;
     }
     #battle-menu {
         margin: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 40%;
     }
     #battle-menu ul li {
-        width: 250px;
-        border: 0;
+        width: auto;
+        border: 3px solid var(--text-color);
+        text-align: center;
+    }
+    #restart:hover {
+        color: red;
+        font-weight: bold;
     }
 }
