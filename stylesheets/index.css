@@ -100,5 +100,13 @@ main {
     }
     img {
         display: inline-block;
+        block-size: auto;
+        max-inline-size: 100%;
+        width: 40%;
+    }
+    p {
+        width: 60%;
+        text-align: center;
+        font-size: calc(1rem + 2.25vw);
     }
 }
