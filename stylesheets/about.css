@@ -9,8 +9,10 @@ nav {
 }
 main {
     flex-direction: column;
+    text-align: center;
     height: auto;
     width: 90%;
+    margin-top: 16px;
 }
 p {
     height: auto;
@@ -18,10 +20,24 @@ p {
     text-align: left;
     font-size: calc(1rem + 1.5vw);
 }
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 figure > img {
-    height: 200px;
-    width: 200px;
-    margin: -16px;
+    max-inline-size: 100%;
+    block-size: auto;
+    width: 75%;
+    margin-top: 0px;
+}
+figcaption {
+    width: auto;
+}
+figcaption a img {
+    max-inline-size: 100%;
+    block-size: auto;
 }
 
 @media (min-width: 768px) {
@@ -34,12 +50,14 @@ figure > img {
     main {
         flex-direction: row-reverse;
     }
+    main > * {
+        width: 50%;
+    }
     nav {
         display: flex;
     }
     figure > img {
-        height: 400px;
-        width: 400px;
+        margin: -16px;
     }
     p {
         font-size: calc(1rem + 1.25vw);
