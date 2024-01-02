@@ -24,7 +24,7 @@ The repo has two separate UIs for navigation
 ![Mobile Minigame](./images/mobile_minigame.png)
 ![Mobile Writing](./images/mobile_writing.png)
 ### pc interface
-![PC Welcome Screen](./pc_welcome/image.png)
+![PC Welcome Screen](./images/pc_welcome.png)
 ![PC Bio](./images/pc_bio.png)
 ![PC Minigame](./images/pc_minigame.png)
 ![PC Writing](./images/pc_writing.png)
