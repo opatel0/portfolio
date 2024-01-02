@@ -1,6 +1,3 @@
-body {
-    justify-content: space-between;
-}
 header {
     margin-top: 16px;
     height: 10%;
@@ -11,6 +8,7 @@ nav {
 main {
     display: flex;
     height: 90%;
+    width: 90%;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
@@ -36,9 +34,13 @@ main h2 {
 }
 .enemy, .player {
     display: flex;
-    height: 150px;
+    height: auto;
     flex-direction: column;
     justify-content: space-evenly;
+}
+img {
+    max-inline-size: 100%;
+    block-size: auto;
 }
 .enemy img {
     background-color: white;
