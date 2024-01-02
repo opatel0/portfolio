@@ -20,9 +20,9 @@ The repo has two separate UIs for navigation
 
 ### mobile interface
 ![Mobile Welcome Screen](./images/mobile_welcome.png)
-![Mobile Bio](.images/mobile_bio.png)
+![Mobile Bio](./images/mobile_bio.png)
 ![Mobile Minigame](./images/mobile_minigame.png)
-![Mobile Writing](.images/mobile_writing.png)
+![Mobile Writing](./images/mobile_writing.png)
 ### pc interface
 ![PC Welcome Screen](./pc_welcome/image.png)
 ![PC Bio](./images/pc_bio.png)
