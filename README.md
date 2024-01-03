@@ -1,4 +1,5 @@
 # portfolio
+[View deployed site here](https://opatel0.github.io/portfolio/)
 ![Embedded Screenshot](./images/scrnshot.png)
 
 ## technologies used
